@@ -16,6 +16,9 @@ RUN   apk --no-cache upgrade && \
         build-base \
         cmake \
         git
+
+COPY  config.json /xmrigCC/config.json
+
 USER miner
 WORKDIR    /xmrig
 ENTRYPOINT  ["./xmrig"]
